@@ -23,4 +23,3 @@ async def test(item_id: int, item: Item, q: str | None = None):
     if q:
         result.update({"q":q})
     return result
-

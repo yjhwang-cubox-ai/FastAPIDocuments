@@ -13,7 +13,7 @@ async def read_items(
         return {"hidden_query": "Not found"}
     
 @app.get("/items2/")
-async def read_items(q: Annotated[str|None, Query(min_length=3)]):
+async def read_items(q: Annotated[int|None, Query(min_length=3)]):
     results = {"items": [{"item_id":"Foo"}, {"item_id":"Bar"}]}
     if q:
         results.update({"q":q})
